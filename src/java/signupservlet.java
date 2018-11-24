@@ -77,7 +77,7 @@ public class signupservlet extends HttpServlet {
         //processRequest(request, response);
         response.setContentType("text/html");
         PrintWriter out =response.getWriter();
-        String mail=request.getParameter("email");
+        String mail=request.getParameter("Id");
         String pass=request.getParameter("psw");
         String cpass=request.getParameter("psw-repeat");
       try {
@@ -90,7 +90,7 @@ public class signupservlet extends HttpServlet {
             if (pass.equals(cpass)) 
             {
                 pst.executeUpdate();
-                out.println("You are registered.");
+                 response.sendRedirect("login.html");
             } 
             else {
                 out.println("Password must match confirm password");

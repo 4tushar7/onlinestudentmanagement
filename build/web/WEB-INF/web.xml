@@ -8,6 +8,30 @@
         <servlet-name>signupservlet</servlet-name>
         <servlet-class>signupservlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>dashservlet</servlet-name>
+        <servlet-class>dashservlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarksServlet</servlet-name>
+        <servlet-class>MarksServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarksServlet1</servlet-name>
+        <servlet-class>MarksServlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarksServlet47</servlet-name>
+        <servlet-class>MarksServlet47</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CoursesEnrolled</servlet-name>
+        <servlet-class>CoursesEnrolled</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Attendance</servlet-name>
+        <servlet-class>Attendance</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>StudentServlet</servlet-name>
         <url-pattern>/StudentServlet</url-pattern>
@@ -15,6 +39,30 @@
     <servlet-mapping>
         <servlet-name>signupservlet</servlet-name>
         <url-pattern>/signupservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>dashservlet</servlet-name>
+        <url-pattern>/dashservlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarksServlet</servlet-name>
+        <url-pattern>/MarksServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarksServlet1</servlet-name>
+        <url-pattern>/MarksServlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MarksServlet47</servlet-name>
+        <url-pattern>/MarksServlet47</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CoursesEnrolled</servlet-name>
+        <url-pattern>/CoursesEnrolled</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Attendance</servlet-name>
+        <url-pattern>/Attendance</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

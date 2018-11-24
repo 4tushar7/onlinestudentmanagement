@@ -34,7 +34,7 @@ CREATE TABLE `logn` (
 
 LOCK TABLES `logn` WRITE;
 /*!40000 ALTER TABLE `logn` DISABLE KEYS */;
-INSERT INTO `logn` VALUES ('tushar07.sangwan@gmail.com','#gate1398'),('shubhamss.rana@gmail.com','#gate1367'),('Bhatianeeraj5@gmail.com','#gate1240'),('sparash29@gmail.com','#gate1381'),('rahul292@gmail.com','#gate1292'),('rahul29@gmail.com','12345'),('sahilAggarwall322@gmail.com','lalla'),('uppalVatsal.cse16@gmail.com','chitkara16'),('rashi99@gmail.com','1222');
+INSERT INTO `logn` VALUES ('tushar07.sangwan@gmail.com','#gate1398'),('shubhamss.rana@gmail.com','#gate1367'),('Bhatianeeraj5@gmail.com','#gate1240'),('sparash29@gmail.com','#gate1381'),('rahul292@gmail.com','#gate1292'),('rahul29@gmail.com','12345'),('sahilAggarwall322@gmail.com','lalla'),('uppalVatsal.cse16@gmail.com','chitkara16'),('rashi99@gmail.com','1222'),('SinghJaparsh22','#gate22'),('rishabh303','#gate'),('sarthak339','#339gate'),('rajat29','1234');
 /*!40000 ALTER TABLE `logn` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -47,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-12 23:30:46
+-- Dump completed on 2018-11-24 15:34:33

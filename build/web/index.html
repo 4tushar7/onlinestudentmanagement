@@ -6,11 +6,44 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Online Student and Assessment Management</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" type="text/css"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            
+            body, html {
+    height: 100%;
+    margin: 0;
+}
+.bg {
+    /* The image used */
+    background-image: url("chitkara.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
 .btn {
     border: none;
     background-color: inherit;
@@ -19,7 +52,7 @@ and open the template in the editor.
     cursor: pointer;
     display: inline-block;
     opacity: 1;
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -27,19 +60,22 @@ background: #eee;
 opacity:0.6;
 }
 
-.Login {color: green;}
-.signup {color: green;}
+.Login {color: white;}
+.signup {color: white;}
+
 
 </style>
     </head>
     <p><font size = "40px" face="Haettenschweiler">Online Student and Assessment Management<img src="chitkara-dark-logo.png" width="200" height="100" align="right"></font></p>
     <br><br>
+    <div class="bg">
     <hr>
-    <body Bgcolor="#008080" text="white">
-        <form>
-      <button class="btn Login" formaction="login.html">Login</button>
- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <button class="btn signup" formaction="signup.html">Sign up</button>
+    <body>
+      <form>
+      <button class="btn Login" formaction="login.html">Sign in</button>
+     <button class="btn signup" formaction="signup1.jsp">Sign up</button>
         </form>
-        
+</div>
+     
     </body>
 </html>

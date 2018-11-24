@@ -11,10 +11,12 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -86,11 +88,24 @@ public class StudentServlet extends HttpServlet {
             pst.setString(1, user);
             pst.setString(2, pass);
             ResultSet rs = pst.executeQuery();
+//            RequestDispather rd=request.getRequestDispatcher("abcd.jsp");
+//            rd.forward(request,response);
             if (rs.next()) {
-                out.println("Welcome");
+                 HttpSession session = request.getSession();
+                 session.setAttribute("name",user);
+                 session.setMaxInactiveInterval(10*60);
+                 response.sendRedirect("dashboard.jsp");
             } 
             else {
-                out.println("Incorrect login credentials");
+                 out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js'></script>");
+                    out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>");
+                    out.println("<script>");
+                    out.println("$(document).ready(function(){");
+                    out.println("swal('incorrect name or password!',' ','error');");
+                    out.println("});");
+                    out.println("</script>");
+                    RequestDispatcher rd = request.getRequestDispatcher("login.html");
+                    rd.include(request,response);
             }
         } 
         catch (ClassNotFoundException | SQLException e) {
