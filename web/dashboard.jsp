@@ -56,13 +56,13 @@ li a:hover {
     <body bgcolor=#333>
      
         <ul>
-            <li><a class="active" href="login.html">Signout</a></li>
+            <li><a class="active" href="login.jsp">Signout</a></li>
 </ul>
         <% String name=(String)session.getAttribute("name"); %>
         <p class="p">Welcome <%=name%></p>
         <hr>
         <div class="iframe">
-        <iframe name="dash1" align="left" width="23%" height="575" frameborder="0" src="dash1.html">
+        <iframe name="dash1" align="left" width="23%" height="575" frameborder="0" src="dash1.jsp">
         </iframe>
         <iframe name="dash2" align="right" width="77%" height="575" frameborder="0" src="dash2.html">
         </iframe>

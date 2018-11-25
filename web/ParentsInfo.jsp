@@ -1,18 +1,18 @@
 <%-- 
-    Document   : TimeTable
-    Created on : Nov 21, 2018, 10:42:49 PM
+    Document   : ParentsInfo
+    Created on : Nov 25, 2018, 10:28:33 PM
     Author     : DELL
 --%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="model.TimeTable47"%>
+<%@page import="model.Info2"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Time Table</title>
-         <style>
+        <title>Parents Info</title>
+        <style>
                  table {
     border-collapse: collapse;
     width: 100%;
@@ -44,41 +44,37 @@ font-family:Bradley Hand ITC;
 </style>
     </head>
     <body bgcolor="#fff">
-        <h1>Time Table</h1>
-        <br>
+        <h1>Parents Information</h1>
+         <br>
         <hr>
         <br>
         <table height="300">
             <tr>
-                <th>Days</th>
-                <th>1st Hour</th>
-                <th>2nd Hour</th>
-                <th>3rd Hour</th>
-                <th>4th Hour</th>
-                <th>5th Hour</th>
-                <th>6th Hour</th>
-                <th>7th Hour</th>
-                <th>8th Hour</th>
+                <th>Father Name</th>
+                <th>Father Occupation</th>
+                <th>Father Mobile no</th>
+                <th>Mother Name</th>
+                <th>Mother Occupation</th>
+                <th>Mother Mobile no</th>
+                <th>Country</th>
             </tr>
             <%
-                ArrayList<TimeTable47> tt=(ArrayList)request.getAttribute("TimeTable");
+                ArrayList<Info2> inf2=(ArrayList)request.getAttribute("ParentsInfo");
                 System.out.println("chk 2");
-                System.out.println(tt);
-                Iterator it=tt.iterator();
+                System.out.println(inf2);
+                Iterator it=inf2.iterator();
                 while(it.hasNext())
                 {
-                    TimeTable47 obj=(TimeTable47)it.next();
+                    Info2 obj=(Info2)it.next();
                 %>
                 <tr>
-        <td><%=obj.Days%></td>
-        <td><%=obj.Hours1%></td>
-        <td><%=obj.Hours2%></td>
-        <td><%=obj.Hours3%></td>
-        <td><%=obj.Hours4%></td>
-        <td><%=obj.Hours5%></td>
-        <td><%=obj.Hours6%></td>
-        <td><%=obj.Hours7%></td>
-        <td><%=obj.Hours8%></td>
+        <td><%=obj.FatherName%></td>
+        <td><%=obj.FatherOccupation%></td>
+        <td><%=obj.MobileNo%></td>
+        <td><%=obj.MotherName%></td>
+        <td><%=obj.MotherOccupation%></td>
+        <td><%=obj.MotherMobileNo%></td>
+        <td><%=obj.Country%></td>
     </tr>
     <%
         }

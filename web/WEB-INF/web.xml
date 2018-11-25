@@ -32,6 +32,18 @@
         <servlet-name>Attendance</servlet-name>
         <servlet-class>Attendance</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PersonalInfo</servlet-name>
+        <servlet-class>PersonalInfo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ParentsInfo</servlet-name>
+        <servlet-class>ParentsInfo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TimeTable</servlet-name>
+        <servlet-class>TimeTable</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>StudentServlet</servlet-name>
         <url-pattern>/StudentServlet</url-pattern>
@@ -63,6 +75,18 @@
     <servlet-mapping>
         <servlet-name>Attendance</servlet-name>
         <url-pattern>/Attendance</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PersonalInfo</servlet-name>
+        <url-pattern>/PersonalInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ParentsInfo</servlet-name>
+        <url-pattern>/ParentsInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TimeTable</servlet-name>
+        <url-pattern>/TimeTable</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

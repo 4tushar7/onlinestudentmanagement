@@ -16,26 +16,32 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `logn`
+-- Table structure for table `parentsinfo`
 --
 
-DROP TABLE IF EXISTS `logn`;
+DROP TABLE IF EXISTS `parentsinfo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `logn` (
-  `name` varchar(50) DEFAULT NULL,
-  `pwd` varchar(30) DEFAULT NULL
+CREATE TABLE `parentsinfo` (
+  `name` varchar(30) DEFAULT NULL,
+  `FatherName` varchar(30) DEFAULT NULL,
+  `FatherOccupation` varchar(30) DEFAULT NULL,
+  `MobileNo` varchar(30) DEFAULT NULL,
+  `MotherName` varchar(30) DEFAULT NULL,
+  `MotherOccupation` varchar(30) DEFAULT NULL,
+  `MotherMobileNo` varchar(30) DEFAULT NULL,
+  `Country` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `logn`
+-- Dumping data for table `parentsinfo`
 --
 
-LOCK TABLES `logn` WRITE;
-/*!40000 ALTER TABLE `logn` DISABLE KEYS */;
-INSERT INTO `logn` VALUES ('tushar07.sangwan@gmail.com','#gate1398'),('shubhamss.rana@gmail.com','#gate1367'),('Bhatianeeraj5@gmail.com','#gate1240'),('rishabh303','#gate');
-/*!40000 ALTER TABLE `logn` ENABLE KEYS */;
+LOCK TABLES `parentsinfo` WRITE;
+/*!40000 ALTER TABLE `parentsinfo` DISABLE KEYS */;
+INSERT INTO `parentsinfo` VALUES ('shubhamss.rana@gmail.com','Mr.H.Rana','Business','9915932438','Mrs.Shashi Rana','Teacher','9915932458','India'),('tushar07.sangwan@gmail.com','Mr.Jitender Singh Sangwan','Business','9464169627','Mrs.Sudershan Sangwan','House Wife','9467634457','India'),('Bhatianeeraj5@gmail.com','Mr.Gulshan Bhatia','Business','7009416061','Mrs.Neerja Bhatia','House Wife','7009416870','India'),('rishabh303','Mr.Dhiman','Govt.Job','9815000388','Mrs.Dhiman','House Wife','9915963289','India');
+/*!40000 ALTER TABLE `parentsinfo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-25 23:26:55
+-- Dump completed on 2018-11-25 23:26:53

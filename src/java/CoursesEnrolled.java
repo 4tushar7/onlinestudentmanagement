@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import Courses.Courses1;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -41,7 +42,9 @@ public class CoursesEnrolled extends HttpServlet {
             try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useSSL=false", "root", "ts7madrid");
-            PreparedStatement pst = conn.prepareStatement("Select * from CourseEnrolled");
+            PreparedStatement pst = conn.prepareStatement("Select * from CourseEnrolled where name=?");
+            HttpSession session=request.getSession(false); 
+            pst.setString(1, (String)session.getAttribute("name"));
             ResultSet rs=pst.executeQuery();
             ArrayList<Courses1> crs=new ArrayList<Courses1>();
             while(rs.next())
@@ -54,8 +57,9 @@ public class CoursesEnrolled extends HttpServlet {
                 obj.CourseName=rs.getString(6);
                 crs.add(obj);
             }
-            System.out.println("chk 1");
-            System.out.println(((Courses1)crs.get(1)).Section);
+              System.out.println((String)session.getAttribute("name"));
+            //System.out.println("chk 1");
+            //System.out.println(((Courses1)crs.get(1)).Section);
             request.setAttribute("CourseEnrolled",crs);
             conn.close();
             

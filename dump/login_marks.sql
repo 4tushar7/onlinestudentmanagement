@@ -38,7 +38,7 @@ CREATE TABLE `marks` (
 
 LOCK TABLES `marks` WRITE;
 /*!40000 ALTER TABLE `marks` DISABLE KEYS */;
-INSERT INTO `marks` VALUES ('tushar07.sangwan@gmail.com','Java','CSL5301','11/40','24/40','08/40'),('tushar07.sangwan@gmail.com','DataStructures','CSL5305','21/40','14/40','20/40'),('tushar07.sangwan@gmail.com','Software','CSL3306','32/40','28/40','30/40'),('rishabh303','Java','CSL5301','20/40','16/40','12/40'),('shubhamss.rana@gmail.com','Java','CSL5301','12/40','18/40','08/40');
+INSERT INTO `marks` VALUES ('tushar07.sangwan@gmail.com','Java','CSL5301','11/40','24/40','08/40'),('tushar07.sangwan@gmail.com','DataStructures','CSL5305','21/40','14/40','20/40'),('tushar07.sangwan@gmail.com','Software','CSL3306','32/40','28/40','30/40'),('rishabh303','Java','CSL5301','20/40','16/40','12/40'),('shubhamss.rana@gmail.com','Java','CSL5301','12/40','18/40','08/40'),('rishabh303','DataStructures with Java','CSL5305','16/40','20/40','21/40'),('rishabh303','Software Engineering','CSL3306','25/40','28/40','21/40'),('rishabh303','ADBMS','CSL2301','35/40','25/40','0/40'),('shubhamss.rana@gmail.com','DataStructures with Java','CSL5305','26/40','12/40','21/40'),('shubhamss.rana@gmail.com','Software Engineering','CSL3306','25/40','29/40','26/40'),('shubhamss.rana@gmail.com','ADBMS','CSL2301','30/40','21/40','22/40'),('Bhatianeeraj5@gmail.com','Java','CSL5301','16/40','16/40','18/40'),('Bhatianeeraj5@gmail.com','DataStructures with Java','CSL5305','24/40','30/40','29/40'),('Bhatianeeraj5@gmail.com','Software Engineering','CSL3306','09/40','21/40','19/40'),('Bhatianeeraj5@gmail.com','ADBMS','CSL2301','25/40','20/40','28/40'),('tushar07.sangwan@gmail.com','ADBMS','CSL2301','36/40','28/40','31/40');
 /*!40000 ALTER TABLE `marks` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-24 15:34:32
+-- Dump completed on 2018-11-25 23:26:54

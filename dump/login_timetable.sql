@@ -16,26 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `logn`
+-- Table structure for table `timetable`
 --
 
-DROP TABLE IF EXISTS `logn`;
+DROP TABLE IF EXISTS `timetable`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `logn` (
-  `name` varchar(50) DEFAULT NULL,
-  `pwd` varchar(30) DEFAULT NULL
+CREATE TABLE `timetable` (
+  `Days` varchar(30) DEFAULT NULL,
+  `Hour1` varchar(30) DEFAULT NULL,
+  `Hour2` varchar(30) DEFAULT NULL,
+  `Hour3` varchar(30) DEFAULT NULL,
+  `Hour4` varchar(30) DEFAULT NULL,
+  `Hour5` varchar(30) DEFAULT NULL,
+  `Hour6` varchar(30) DEFAULT NULL,
+  `Hour7` varchar(30) DEFAULT NULL,
+  `Hour8` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `logn`
+-- Dumping data for table `timetable`
 --
 
-LOCK TABLES `logn` WRITE;
-/*!40000 ALTER TABLE `logn` DISABLE KEYS */;
-INSERT INTO `logn` VALUES ('tushar07.sangwan@gmail.com','#gate1398'),('shubhamss.rana@gmail.com','#gate1367'),('Bhatianeeraj5@gmail.com','#gate1240'),('rishabh303','#gate');
-/*!40000 ALTER TABLE `logn` ENABLE KEYS */;
+LOCK TABLES `timetable` WRITE;
+/*!40000 ALTER TABLE `timetable` DISABLE KEYS */;
+INSERT INTO `timetable` VALUES ('Monday','Java','Java','Java','-','-','DataStructures with Java','DataStructures with Java','DataStructures with Java'),('Tuesday','Java','Java','Java','-','-','Software Engg','Software Engg','Software Engg'),('Wednesday','Java','Java','Java','-','-','DataStructures with Java','DataStructures with Java','DataStructures with Java'),('Thursday','Java','Java','Java','-','-','Software Engg','Software Engg','Software Engg'),('Friday','Java','Java','Java','-','-','DataStructures with Java','DataStructures with Java','DataStructures with Java'),('Saturday','-','-','-','-','-','-','-','-');
+/*!40000 ALTER TABLE `timetable` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-25 23:26:55
+-- Dump completed on 2018-11-25 23:26:57

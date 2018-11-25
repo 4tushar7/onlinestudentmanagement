@@ -38,7 +38,7 @@ CREATE TABLE `courseenrolled` (
 
 LOCK TABLES `courseenrolled` WRITE;
 /*!40000 ALTER TABLE `courseenrolled` DISABLE KEYS */;
-INSERT INTO `courseenrolled` VALUES ('tushar07.sangwan@gmail.com','3L','L','CSL5301','5SEM','Java'),('tushar07.sangwan@gmail.com','3L','L','CSL5305','5SEM','DataStructuresJava'),('tushar07.sangwan@gmail.com','3L','L','CSL3306','5SEM','Software Engg'),('tushar07.sangwan@gmail.com','3L','P','CSP2301','5SEM','ADBMS');
+INSERT INTO `courseenrolled` VALUES ('tushar07.sangwan@gmail.com','3L','L','CSL5301','5SEM','Java'),('tushar07.sangwan@gmail.com','3L','L','CSL5305','5SEM','DataStructuresJava'),('tushar07.sangwan@gmail.com','3L','L','CSL3306','5SEM','Software Engg'),('tushar07.sangwan@gmail.com','3L','P','CSP2301','5SEM','ADBMS'),('rishabh303','3L','L','CSL5301','5SEM','Java'),('rishabh303','3L','L','CSL5305','5SEM','DataStructuresJava'),('rishabh303','3L','L','CSL3306','5SEM','Software Engg'),('rishabh303','3L','L','CSL2307','5SEM','Advance Java'),('rishabh303','3L','P','CSP2301','5SEM','ADBMS'),('shubhamss.rana@gmail.com','3L','L','CSL5301','5SEM','Java'),('shubhamss.rana@gmail.com','3L','L','CSL5305','5SEM','DataStructuresJava'),('shubhamss.rana@gmail.com','3L','L','CSL3306','5SEM','Software Engg'),('shubhamss.rana@gmail.com','3L','L','CSL2307','5SEM','Advance Java'),('shubhamss.rana@gmail.com','3L','P','CSP2301','5SEM','ADBMS'),('shubhamss.rana@gmail.com','3L','L','CSL2301','5SEM','ADBMS Lecture'),('tushar07.sangwan@gmail.com','3L','L','CSL2301','5SEM','ADBMS Lecture'),('rishabh303','3L','L','CSL2301','5SEM','ADBMS Lecture'),('Bhatianeeraj5@gmail.com','3L','L','CSL5301','5SEM','Java'),('Bhatianeeraj5@gmail.com','3L','L','CSL5305','5SEM','DataStructuresJava'),('Bhatianeeraj5@gmail.com','3L','L','CSL3306','5SEM','Software Engg'),('Bhatianeeraj5@gmail.com','3L','L','CSL2307','5SEM','Advance Java'),('Bhatianeeraj5@gmail.com','3L','L','CSL2301','5SEM','ADBMS Lecture'),('Bhatianeeraj5@gmail.com','3L','P','CSP2301','5SEM','ADBMS');
 /*!40000 ALTER TABLE `courseenrolled` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-24 15:34:34
+-- Dump completed on 2018-11-25 23:26:56

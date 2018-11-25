@@ -16,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Attendance1;
 
 /**
@@ -41,7 +42,9 @@ public class Attendance extends HttpServlet {
             try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useSSL=false", "root", "ts7madrid");
-            PreparedStatement pst = conn.prepareStatement("Select * from attendance");
+            PreparedStatement pst = conn.prepareStatement("Select * from attendance where name=?");
+            HttpSession session=request.getSession(false); 
+            pst.setString(1, (String)session.getAttribute("name"));
             ResultSet rs=pst.executeQuery();
             ArrayList<Attendance1> atd=new ArrayList<Attendance1>();
             while(rs.next())
@@ -57,8 +60,9 @@ public class Attendance extends HttpServlet {
                 obj.Attended=rs.getString(9);
                 atd.add(obj);
             }
-            System.out.println("chk 1");
-            System.out.println(((Attendance1)atd.get(1)).Subject);
+            System.out.println((String)session.getAttribute("name"));
+            //System.out.println("chk 1");
+            //System.out.println(((Attendance1)atd.get(1)).Subject);
             request.setAttribute("attendance",atd);
             conn.close();
             

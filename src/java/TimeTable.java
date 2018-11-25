@@ -10,19 +10,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.TimeTable47;
 
 /**
  *
  * @author DELL
  */
-public class StudentServlet extends HttpServlet {
+public class TimeTable extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,18 +36,40 @@ public class StudentServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("text/html;charset=UTF-8");  
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet StudentServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet StudentServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useSSL=false", "root", "ts7madrid");
+            PreparedStatement pst = conn.prepareStatement("Select * from TimeTable");
+            ResultSet rs=pst.executeQuery();
+            ArrayList<TimeTable47> tt=new ArrayList<TimeTable47>();
+            while(rs.next())
+            {
+                TimeTable47 obj=new TimeTable47();
+                obj.Days=rs.getString(1);
+                obj.Hours1=rs.getString(2);
+                obj.Hours2=rs.getString(3);
+                obj.Hours3=rs.getString(4);
+                obj.Hours4=rs.getString(5);
+                obj.Hours5=rs.getString(6);
+                obj.Hours6=rs.getString(7);
+                obj.Hours7=rs.getString(8);
+                obj.Hours8=rs.getString(9);
+                tt.add(obj);
+            }
+            
+            request.setAttribute("TimeTable",tt);
+            conn.close();
+            
+            RequestDispatcher rd=request.getRequestDispatcher("/TimeTable.jsp");
+            rd.forward(request,response);
+    }
+         catch(Exception e)
+                 {
+                     //out.println(e);
+                 }
         }
     }
 
@@ -76,43 +99,7 @@ public class StudentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-         response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-        String user = request.getParameter("name");
-        String pass = request.getParameter("pass");
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useSSL=false", "root", "ts7madrid");
-            PreparedStatement pst = conn.prepareStatement("Select name,pwd from Logn where name=? and pwd=?");
-            pst.setString(1, user);
-            pst.setString(2, pass);
-            ResultSet rs = pst.executeQuery();
-//            RequestDispather rd=request.getRequestDispatcher("abcd.jsp");
-//            rd.forward(request,response);
-            if (rs.next()) {
-                 HttpSession session = request.getSession();
-                 session.setAttribute("name",user);
-                 session.setMaxInactiveInterval(10*60);
-                 response.sendRedirect("dashboard.jsp");
-            } 
-            else {
-                 out.println("<script src='https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.4/sweetalert2.all.js'></script>");
-                    out.println("<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>");
-                    out.println("<script>");
-                    out.println("$(document).ready(function(){");
-                    out.println("swal('incorrect name or password!',' ','error');");
-                    out.println("});");
-                    out.println("</script>");
-                    RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                    rd.include(request,response);
-            }
-        } 
-        catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
-       
-        }
-       
+        processRequest(request, response);
     }
 
     /**

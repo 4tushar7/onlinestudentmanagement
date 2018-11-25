@@ -43,7 +43,7 @@ li a:hover
     <body bgcolor="#ECF0F1">
         
         <ul>
-<li><a href="StudentInformation.jsp" target="dash2">Student Information</a>
+<li><a href="StudentInfo.jsp" target="dash2">Student Information</a>
     <br><br><br><br><br>
 <li><a href="CoursesEnrolled" target="dash2">Courses Enrolled</a>
     <br><br><br><br><br>
@@ -51,10 +51,9 @@ li a:hover
 <br><br><br><br><br>
 <a href="MarksServlet47" target="dash2">Marks</a>
 <br><br><br><br><br>
-<a href="TimeTable.jsp" target="dash2">Time Table</a>
+<a href="TimeTable" target="dash2">Time Table</a>
 <br>
 </li>
 </ul>
     </body>
 </html>
-

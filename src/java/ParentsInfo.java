@@ -17,12 +17,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Student;
+import model.Info2;
+
 /**
  *
  * @author DELL
  */
-public class MarksServlet47 extends HttpServlet {
+public class ParentsInfo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,7 +34,7 @@ public class MarksServlet47 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");  
         try (PrintWriter out = response.getWriter()) {
@@ -41,32 +42,33 @@ public class MarksServlet47 extends HttpServlet {
             try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useSSL=false", "root", "ts7madrid");
-            PreparedStatement pst = conn.prepareStatement("Select * from marks where name=?");
-             HttpSession session=request.getSession(false); 
-            pst.setString(1, (String)session.getAttribute("name"));
+            PreparedStatement pst = conn.prepareStatement("Select * from ParentsInfo where name=?");
+            HttpSession session=request.getSession(false); 
+            pst.setString(1,(String)session.getAttribute("name"));
             ResultSet rs=pst.executeQuery();
-            ArrayList<Student> std=new ArrayList<Student>();
+            ArrayList<Info2> inf2=new ArrayList<Info2>();
             while(rs.next())
             {
-                Student obj=new Student();
-                obj.CourseName=rs.getString(2);
-                obj.CourseCode=rs.getString(3);
-                obj.ST1=rs.getString(4);
-                obj.ST2=rs.getString(5);
-                obj.ST3=rs.getString(6);
-                std.add(obj);
+                Info2 obj=new Info2();
+                obj.FatherName=rs.getString(2);
+                obj.FatherOccupation=rs.getString(3);
+                obj.MobileNo=rs.getString(4);
+                obj.MotherName=rs.getString(5);
+                obj.MotherOccupation=rs.getString(6);
+                obj.MotherMobileNo=rs.getString(7);
+                obj.Country=rs.getString(8);
+                inf2.add(obj);
             }
             System.out.println((String)session.getAttribute("name"));
- //           System.out.println(((Student)std.get(1)).CourseName);
-            request.setAttribute("marks",std);
+            request.setAttribute("ParentsInfo",inf2);
             conn.close();
             
-            RequestDispatcher rd=request.getRequestDispatcher("/Marks.jsp");
+            RequestDispatcher rd=request.getRequestDispatcher("/ParentsInfo.jsp");
             rd.forward(request,response);
     }
          catch(Exception e)
-                 {  e.printStackTrace();
-                     out.println(e);
+                 {
+                     //out.println(e);
                  }
         }
     }
@@ -97,9 +99,9 @@ public class MarksServlet47 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-         processRequest(request,response);
+        processRequest(request, response);
     }
+
     /**
      * Returns a short description of the servlet.
      *
