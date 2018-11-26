@@ -110,9 +110,7 @@ public class StudentServlet extends HttpServlet {
         } 
         catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-       
-        }
-       
+       }
     }
 
     /**

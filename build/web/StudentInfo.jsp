@@ -45,7 +45,7 @@ h1
         <br>
         <hr>
         <br>
-         <form>
+         <form align="center">
       <button class="button button2" formaction="PersonalInfo">Personal Info</button>
      <button class="button button2" formaction="ParentsInfo">Parents Info</button>
         </form>

@@ -156,9 +156,8 @@ input[type=submit]:active {
                 <label for="psw-repeat"><b>Repeat Password</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
             <div id="lower">
-                
                 <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-                <input type="submit" value="Sign Up">
+                 <input type="submit" value="Sign Up"> 
             </div><!--/ lower-->
         </form>
     </div><!--/ container-->

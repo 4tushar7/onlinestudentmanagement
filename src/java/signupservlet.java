@@ -90,7 +90,7 @@ public class signupservlet extends HttpServlet {
             if (pass.equals(cpass)) 
             {
                 pst.executeUpdate();
-                 response.sendRedirect("login.html");
+                 response.sendRedirect("login.jsp");
             } 
             else {
                 out.println("Password must match confirm password");
