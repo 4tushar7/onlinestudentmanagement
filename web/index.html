@@ -16,7 +16,7 @@ and open the template in the editor.
 }
 .bg {
     /* The image used */
-    background-image: url("chitkara.jpg");
+    background-image: url("chitkaaraa.jpg");
 
     /* Full height */
     height: 100%; 
@@ -74,7 +74,34 @@ button{
     cursor: pointer;
     border-radius: 66px;
 }
+.topnav {
+  overflow: hidden;
+  background-color: #000;
+  min-height:50px;
+}
 
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #fff;
+  color: blue;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+ p{
+      font-family: Lucida Fax;
+      font-size:15px;
+  }
 </style>
     </head>
     <p><font size = "40px" face="Haettenschweiler">Online Student and Assessment Management<img src="chitkara-dark-logo.png" width="200" height="100" align="right"></font></p>
@@ -82,11 +109,14 @@ button{
     <div class="bg">
     <hr>
     <body>
+        <div class="topnav">
       <form align="right">
       <button class="btn Login" formaction="login.jsp">Sign in</button>
      <button class="btn signup" formaction="signup1.jsp">Sign up</button>
         </form>
-</div>
-     
-    </body>
+        </div>
+        <br>
+        
+       </div>
+  </body>
 </html>
